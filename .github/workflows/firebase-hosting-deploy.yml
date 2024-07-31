@@ -1,0 +1,32 @@
+name: Deploy to Firebase Hosting
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy to Firebase Hosting
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: '${{ secrets.GITHUB_TOKEN }}'
+        firebaseServiceAccount: '${{ secrets.1//0gFT5-LoFOUqDCgYIARAAGBASNwF-L9IrKJLB-UjRzzCAx1AlAFpnFUCy4SXOHB9mV1rApaJvm8UL_C_ATO212S8CxCFDh8Z8VlE }}'
+        channelId: live
+        projectId: albrightraj2003
