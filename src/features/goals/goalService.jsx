@@ -59,3 +59,25 @@ export const deleteGoal = async (id, token) => {
 
   return response.json();
 };
+
+export const updateGoal = async (id, goalData, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+  };
+
+  const response = await fetch(`${API_URL}/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({ text: goalData }),
+    ...config,
+  });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || 'Failed to update goal');
+  }
+
+  return response.json();
+};

@@ -41,3 +41,16 @@ export const useCreateGoal = () => {
       },
     });
 };
+
+export const useUpdateGoal = () => {
+  const user = useSelector((state) => state.auth.user);
+  const token = user ? user.token : null;
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: ({ id, goalData }) => updateGoal(id, goalData, token),
+    onSuccess: () => {
+      queryClient.invalidateQueries(['goals']);
+    },
+  });
+};

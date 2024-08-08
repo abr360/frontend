@@ -15,8 +15,8 @@ function GoalItem({ goal }) {
     <div className="bg-gray-800 text-white shadow-md rounded-lg p-4 mb-4 w-full">
       <div className=" justify-between items-start  ">
         <div className="min-w-0 min-h-0 ">
-          <div className='flex justify-between overflow-x-auto whitespace-pre-wrap'>
-             <div className="text-white bg-blue-600 py-2 px-2 rounded-xl text-sm w-full">
+          <div className='flex justify-between '>
+             <div className="text-white bg-blue-600 py-2 px-2 rounded-xl text-sm ">
             {new Date(goal.createdAt).toLocaleString('en-US')}
           </div>
           
