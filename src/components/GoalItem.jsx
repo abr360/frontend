@@ -8,21 +8,19 @@ function GoalItem({ goal }) {
 
   const handleCopy = () => {
     setCopied(true);
-    setTimeout(() => setCopied(false), 1500); // Reset copied state after 1.5 seconds
+    setTimeout(() => setCopied(false), 1500); 
   };
 
   return (
-    <div className="bg-gray-800 text-white shadow-md rounded-lg p-4 mb-4">
-      <div className="flex justify-between items-start">
-        <div className="min-w-0 min-h-0">
-          <div className="text-white bg-blue-600 py-2 px-1 rounded-xl text-sm">
+    <div className="bg-gray-800 text-white shadow-md rounded-lg p-4 mb-4 w-full">
+      <div className=" justify-between items-start  ">
+        <div className="min-w-0 min-h-0 ">
+          <div className='flex justify-between overflow-x-auto whitespace-pre-wrap'>
+             <div className="text-white bg-blue-600 py-2 px-2 rounded-xl text-sm w-full">
             {new Date(goal.createdAt).toLocaleString('en-US')}
           </div>
-          <div className="overflow-x-auto">
-            <pre className="whitespace-pre-wrap">{goal.text}</pre> {/* Display plain text */}
-          </div>
-        </div>
-        <div className="flex items-center ml-4">
+          
+          <div className="flex items-end ml-4">
           <CopyToClipboard text={goal.text}>
             <button
               onClick={handleCopy}
@@ -40,6 +38,12 @@ function GoalItem({ goal }) {
             X
           </button>
         </div>
+        </div>
+          <div className="overflow-x-auto whitespace-pre-wrap">
+            <pre className="">{goal.text}</pre>
+          </div>
+        </div>
+        
       </div>
     </div>
   );

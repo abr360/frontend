@@ -48,7 +48,7 @@ function Dashboard() {
     return <div>Error: {error.message}</div>;
   }
 
-  // Sort goals in descending order based on their ID
+  
   const sortedGoals = goals?.sort((a, b) => b._id.localeCompare(a._id));
 
   return (
@@ -60,7 +60,7 @@ function Dashboard() {
           <GoalForm/>
 
           {sortedGoals && sortedGoals.length > 0 ? (
-            <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 *:mx-10 gap-4 p-4">
+            <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4  lg:mx-20">
               {sortedGoals.map((goal) => (
                 <GoalItem key={goal._id} goal={goal} />
               ))}

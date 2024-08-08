@@ -7,7 +7,7 @@ function GoalForm() {
   const { mutate: createGoal, isLoading } = useCreateGoal();
 
   const onSubmit = (data) => {
-    createGoal(data.goal); // Send the goal content to the API
+    createGoal(data.goal); 
     reset();
   };
 
