@@ -16,7 +16,8 @@ const Header = () => {
   };
 
   return (
-    <div className='flex justify-between border-b-2 bg-cyan-700 text-white'>
+    
+    <div className='flex justify-between border-b-2 bg-cyan-700 text-white fixed top-0 left-0 right-0 '>
       <div className='lg:py-5 py-4 pl-3'>
         <Link className='lg:text-2xl text-xl' to='/'>Goals Setter</Link>
       </div>

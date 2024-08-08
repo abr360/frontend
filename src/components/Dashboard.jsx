@@ -53,11 +53,11 @@ function Dashboard() {
 
   return (
     <>
-      <div className=' bg-cyan-100 h-full'>
+      <div className=' bg-cyan-100 h-screen'>
         <section className=" p-4">
-          <h2 className="text-2xl font-bold text-center">Welcome, {user?.name}</h2>
+          <h2 className="text-2xl font-bold text-center mt-20">Welcome, {user?.name}</h2>
           <h3 className="text-lg text-center text-gray-600">Here are your goals</h3>
-          <GoalForm/>
+          <GoalForm />
 
           {sortedGoals && sortedGoals.length > 0 ? (
             <div className=" grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4  lg:mx-20">
