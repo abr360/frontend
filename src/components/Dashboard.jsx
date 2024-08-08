@@ -18,29 +18,9 @@ function Dashboard() {
 
   if (isLoading) {
     return (
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'center', 
-        height: '100vh',
-        backgroundColor:'rgb(207 250 254)'
-      }}>
-        <div style={{ 
-          border: '4px solid #f3f3f3', 
-          borderTop: '4px solid #3498db', 
-          borderRadius: '50%',
-          width: '40px',
-          height: '40px',
-          animation: 'spin 2s linear infinite' 
-        }}>
-        </div>
-        <style>{`
-          @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-          }
-        `}</style>
-      </div>
+      <div className="flex justify-center items-center h-screen bg-cyan-100">
+      <div className="border-4 border-gray-200 border-t-blue-600 rounded-full w-10 h-10 animate-spin"></div>
+    </div>
     );
   }
 
@@ -53,7 +33,7 @@ function Dashboard() {
 
   return (
     <>
-      <div className=' bg-cyan-100 h-screen'>
+      <div className=' bg-cyan-100 min-h-screen'>
         <section className=" p-4">
           <h2 className="text-2xl font-bold text-center mt-20">Welcome, {user?.name}</h2>
           <h3 className="text-lg text-center text-gray-600">Here are your goals</h3>
