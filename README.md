@@ -30,10 +30,7 @@ Goal Setter Frontend is a modern React-based frontend application designed to he
 - **Framework**: React, Vite
 - **State Management**: Redux Toolkit
 - **Styling**: Tailwind CSS
-- **Rich Text Editors**: CKEditor, TinyMCE, Jodit, Draft.js, Quill
-- **Form Handling**: React Hook Form, Yup
-- **Code Highlighting**: Prism.js, Highlight.js
-
+- **Form Handling**: React Hook Form
 ## Getting Started
 
 Follow these steps to set up and run the project locally.
